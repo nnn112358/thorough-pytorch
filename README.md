@@ -256,12 +256,7 @@ git push -f
 ## 七、謝辞とフィードバック
 
 * DataWhaleメンバーの **叶前坤 @[PureBuckwheat](https://github.com/PureBuckwheat)** と **胡锐锋 @[Relph1119](https://github.com/Relph1119)** に文書の校正でご尽力いただきました。
-* ご意見があればDataWhaleまでご連絡ください。Issueでの提案も大歓迎です。
-* 特に本チュートリアルに貢献してくださった学生の皆様、そしてMMYOLOの貢献者の皆様に感謝申し上げます。
 
-<a href="https://github.com/datawhalechina/thorough-pytorch/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=datawhalechina/thorough-pytorch" />
-</a>
 
 Made with [contrib.rocks](https://contrib.rocks).
 
@@ -273,4 +268,5 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知識共有ライセンス" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />
 本作品は <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンス</a> に基づいて公開されています。
+
 
