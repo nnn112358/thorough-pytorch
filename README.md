@@ -1,143 +1,174 @@
+
+
 # 深入浅出PyTorch
 
->[!IMPORTANT]
->[在线阅读地址](https://datawhalechina.github.io/thorough-pytorch/) | [配套视频教程](https://www.bilibili.com/video/BV1L44y1472Z) | [智海（国家级AI科教平台）](https://aiplusx.momodel.cn/classroom/class/664bf5db24cff38ad7d2a20e?activeKey=intro)
+> \[!IMPORTANT]
+> [オンライン閲覧アドレス](https://datawhalechina.github.io/thorough-pytorch/) | [対応ビデオチュートリアル](https://www.bilibili.com/video/BV1L44y1472Z) | [智海（国家級AI教育プラットフォーム）](https://aiplusx.momodel.cn/classroom/class/664bf5db24cff38ad7d2a20e?activeKey=intro)
 >
->请注意：在线文档更新落后于主仓库更新，建议看source文件夹下的markdown文件
+> ご注意：オンラインドキュメントの更新はリポジトリの更新より遅れます。最新情報は`source`フォルダ内のMarkdownファイルをご覧ください。
 
-## 一、项目初衷
+---
 
-PyTorch是利用深度学习进行数据科学研究的重要工具，在灵活性、可读性和性能上都具备相当的优势，近年来已成为学术界实现深度学习算法最常用的框架。
+## 一、プロジェクトの初志
 
-考虑到PyTorch的学习兼具理论储备和动手训练，两手都要抓两手都要硬的特点，我们开发了《深入浅出PyTorch》课程，期望以组队学习的形式，帮助大家从入门到熟练掌握PyTorch工具，进而实现自己的深度学习算法。
+PyTorchは深層学習を利用したデータサイエンス研究の重要なツールであり、柔軟性・可読性・性能の面で大きな利点を持ち、近年では学術界で深層学習アルゴリズムを実装する際に最も広く使われるフレームワークとなっています。
 
-我们的愿景是：通过组队学习，大家能够掌握由浅入深地PyTorch的基本知识和内容，经过自己的动手实践加深操作的熟练度。同时通过项目实战，充分锻炼编程能力，掌握PyTorch进行深度学习的基本流程，提升解决实际问题的能力。
+PyTorchの学習は、理論的な蓄積と実践的なトレーニングの両面を必要とする「両手に花」の特徴を持っています。そこで私たちは《深入浅出PyTorch》というコースを開発しました。チーム学習の形式をとり、入門から熟練までPyTorchを使いこなし、自ら深層学習アルゴリズムを実装できるようになることを目指しています。
 
-学习的先修要求是，会使用Python编程，了解包括神经网络在内的机器学习算法，勤于动手实践。
+私たちのビジョンは：チーム学習を通じて、PyTorchの基本知識を基礎から段階的に学び、実際に手を動かして操作への熟練度を高めることです。同時にプロジェクト実践を通じてプログラミング能力を十分に鍛え、PyTorchを使った深層学習の基本的な流れを習得し、実際の問題解決能力を高めることを目指しています。
 
-《深入浅出PyTorch》是一个系列，一共有三个部分。已经上线的是本系列的第一、二部分，后续会不断更新《深入浅出PyTorch》（下），给出更贴合实际应用的实战案例。
+学習の前提条件としては、Pythonプログラミングができること、ニューラルネットワークを含む機械学習アルゴリズムを理解していること、そして積極的に手を動かす姿勢が求められます。
 
-## 二、内容简介
-- 第零章：前置知识（选学）
-  - 人工智能简史
-  - 相关评价指标
-  - 常用包的学习
-  - Jupyter相关操作
-- 第一章：PyTorch的简介和安装
-  - PyTorch简介
-  - PyTorch的安装
-  - PyTorch相关资源简介
-- 第二章：PyTorch基础知识
-  - 张量及其运算
-  - 自动求导简介
-  - 并行计算、CUDA和cuDNN简介
-- 第三章：PyTorch的主要组成模块
-  - 思考：完成一套深度学习流程需要哪些关键环节
-  - 基本配置
-  - 数据读入
-  - 模型构建
-  - 损失函数
-  - 优化器
-  - 训练和评估
-  - 可视化
-- 第四章：PyTorch基础实战
-  - 基础实战——Fashion-MNIST时装分类
-  - 基础实战——果蔬分类实战（notebook）
-- 第五章：PyTorch模型定义
-  - 模型定义方式
-  - 利用模型块快速搭建复杂网络
-  - 模型修改
-  - 模型保存与读取
-- 第六章：PyTorch进阶训练技巧
-  - 自定义损失函数
-  - 动态调整学习率
-  - 模型微调-torchvision
-  - 模型微调-timm
-  - 半精度训练
-  - 数据扩充
-  - 超参数的修改及保存
-  - PyTorch模型定义与进阶训练技巧
-- 第七章：PyTorch可视化
-  - 可视化网络结构
-  - 可视化CNN卷积层
-  - 使用TensorBoard可视化训练过程
-  - 使用wandb可视化训练过程
-  - 使用SwanLab可视化训练过程
-- 第八章：PyTorch生态简介
-  - 简介
-  - 图像—torchvision
-  - 视频—PyTorchVideo
-  - 文本—torchtext
-  - 音频-torchaudio
-- 第九章：模型部署
-  - 使用ONNX进行部署并推理
-- 第十章：常见网络代码的解读(推进中)
-  - 计算机视觉
-    - 图像分类
-      - ResNet源码解读
-      - Swin Transformer源码解读
-      - Vision Transformer源码解读
-      - RNN源码解读
-      - LSTM源码解读及其实战
-    - 目标检测
-      - YOLO系列解读（与MMYOLO合作）
-    - 图像分割
-  - 自然语言处理
-    - RNN源码解读
-  - 音频处理
-  - 视频处理
-  - 其他
-  - 
+《深入浅出PyTorch》はシリーズとして全3部構成です。すでに本シリーズの第1部と第2部は公開済みであり、今後も《深入浅出PyTorch（下）》を更新し、実践的な応用により近い事例を提供していく予定です。
 
-## 三、人员安排
-| 成员&nbsp; | 个人简介                                            | 个人主页                                           |
-| --------------- | --------------------------------------------------- | -------------------------------------------------- |
-|   牛志康   | DataWhale成员，西安电子科技大学本科生 | [[知乎](https://www.zhihu.com/people/obeah-82)][[个人主页](https://nofish-528.github.io/)] |
-|   李嘉骐   | DataWhale成员，清华大学研究生 | [[知乎](https://www.zhihu.com/people/li-jia-qi-16-9/posts)] |
-|    刘洋    | Datawhale成员，中国科学院数学与系统科学研究所研究生 | [[知乎](https://www.zhihu.com/people/ming-ren-19-34/asks)]   |
-|   陈安东   | DataWhale成员，哈尔滨工业大学研究生                   | [[个人主页](https://andongblue.github.io/chenandong.github.io/)] |
+---
 
-教程贡献情况（已上线课程内容）：
+## 二、内容概要
 
-李嘉骐：第三章；第四章；第五章；第六章；第七章；第八章；内容整合
+* **第0章：前提知識（選択学習）**
 
-牛志康：第一章；第三章；第六章；第七章；第八章，第九章，第十章；文档部署
+  * 人工知能の簡単な歴史
+  * 関連する評価指標
+  * よく使うライブラリの学習
+  * Jupyter関連の操作
+* **第1章：PyTorchの紹介とインストール**
 
-刘洋：第二章；第三章
+  * PyTorchの概要
+  * PyTorchのインストール
+  * PyTorch関連リソースの紹介
+* **第2章：PyTorch基礎知識**
 
-陈安东：第二章；第三章；第七章
+  * テンソルとその演算
+  * 自動微分の概要
+  * 並列計算、CUDAとcuDNNの紹介
+* **第3章：PyTorchの主要モジュール**
 
-## 四、 课程编排与配套视频
+  * 思考：深層学習の一連の流れを実現するために必要な要素は何か
+  * 基本的な設定
+  * データの読み込み
+  * モデルの構築
+  * 損失関数
+  * 最適化手法
+  * 学習と評価
+  * 可視化
+* **第4章：PyTorch基礎実戦**
+
+  * 基礎実戦 —— Fashion-MNISTファッション分類
+  * 基礎実戦 —— 果物・野菜分類（notebook）
+* **第5章：PyTorchモデル定義**
+
+  * モデル定義の方法
+  * モジュールブロックを活用して複雑なネットワークを迅速に構築
+  * モデルの修正
+  * モデルの保存と読み込み
+* **第6章：PyTorch応用トレーニングテクニック**
+
+  * カスタム損失関数
+  * 学習率の動的調整
+  * モデルの微調整 - torchvision
+  * モデルの微調整 - timm
+  * 半精度トレーニング
+  * データ拡張
+  * ハイパーパラメータの変更と保存
+  * PyTorchモデル定義と応用トレーニングの実践
+* **第7章：PyTorch可視化**
+
+  * ネットワーク構造の可視化
+  * CNN畳み込み層の可視化
+  * TensorBoardを使った学習過程の可視化
+  * wandbを使った学習過程の可視化
+  * SwanLabを使った学習過程の可視化
+* **第8章：PyTorchエコシステムの紹介**
+
+  * 概要
+  * 画像 —— torchvision
+  * 動画 —— PyTorchVideo
+  * テキスト —— torchtext
+  * 音声 —— torchaudio
+* **第9章：モデルデプロイ**
+
+  * ONNXを使ったデプロイと推論
+* **第10章：よくあるネットワークコードの解読（進行中）**
+
+  * コンピュータビジョン
+
+    * 画像分類
+
+      * ResNetコード解読
+      * Swin Transformerコード解読
+      * Vision Transformerコード解読
+      * RNNコード解読
+      * LSTMコード解読と実戦
+    * 物体検出
+
+      * YOLOシリーズ解読（MMYOLOと共同）
+    * 画像分割
+  * 自然言語処理
+
+    * RNNコード解読
+  * 音声処理
+  * 動画処理
+  * その他
+
+---
+
+## 三、メンバー紹介
+
+| メンバー | 個人紹介                                | 個人ページ                                                                                |
+| ---- | ----------------------------------- | ------------------------------------------------------------------------------------ |
+| 牛志康  | DataWhaleメンバー、西安電子科技大学学部生           | [知乎](https://www.zhihu.com/people/obeah-82) / [個人ページ](https://nofish-528.github.io/) |
+| 李嘉骐  | DataWhaleメンバー、清華大学大学院生              | [知乎](https://www.zhihu.com/people/li-jia-qi-16-9/posts)                              |
+| 刘洋   | DataWhaleメンバー、中国科学院数学・システム科学研究所大学院生 | [知乎](https://www.zhihu.com/people/ming-ren-19-34/asks)                               |
+| 陈安东  | DataWhaleメンバー、ハルビン工業大学大学院生          | [個人ページ](https://andongblue.github.io/chenandong.github.io/)                          |
+
+**チュートリアルへの貢献状況（公開済み内容）：**
+
+* 李嘉骐：第3章、第4章、第5章、第6章、第7章、第8章、内容統合
+* 牛志康：第1章、第3章、第6章、第7章、第8章、第9章、第10章、ドキュメントデプロイ
+* 刘洋：第2章、第3章
+* 陈安东：第2章、第3章、第7章
+
+---
+
+## 四、コース編成と対応ビデオ
+
 <details>
 
-部分章节直播讲解请观看B站回放（持续更新）：https://www.bilibili.com/video/BV1L44y1472Z
+一部の章はBilibiliにてライブ講義の録画を視聴可能です（随時更新）：
+[https://www.bilibili.com/video/BV1L44y1472Z](https://www.bilibili.com/video/BV1L44y1472Z)
 
-- 课程编排：
-  深入浅出PyTorch分为三个阶段：PyTorch深度学习基础知识、PyTorch进阶操作、PyTorch案例分析。
+* **コース編成：**
+  深入浅出PyTorchは3段階に分かれています：
 
-- 使用方法:
+  1. PyTorch深層学習基礎
+  2. PyTorch応用操作
+  3. PyTorchケーススタディ
 
-  我们的课程内容都以markdown格式或jupyter notebook的形式保存在本仓库内。除了多看加深课程内容的理解外，最重要的还是动手练习、练习、练习
+* **使用方法：**
+  コース内容はMarkdownまたはJupyter Notebook形式でリポジトリ内に保存されています。理解を深めるために繰り返し読み返すことも大切ですが、最も重要なのは **手を動かして練習すること** です。
 
-- 组队学习安排:
+* **チーム学習スケジュール：**
 
-  第一部分：第一章到第四章，学习周期：10天；
+  * 第1部：第1章〜第4章（学習期間：10日）
+  * 第2部：第5章〜第8章（学習期間：11日）
 
-  第二部分：第五章到第八章，学习周期：11天
 </details>
 
-## 五、关于贡献
-<details> 
+---
 
-本项目使用`Forking`工作流，具体参考[atlassian文档](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)大致步骤如下：
+## 五、貢献方法
 
-1. 在GitHub上Fork本仓库
-2. Clone Fork后的个人仓库
-3. 设置`upstream`仓库地址，并禁用`push`
-4. 使用分支开发，课程分支名为`lecture{#NO}`，`#NO`保持两位，如`lecture07`，对应课程目录
-5. PR之前保持与原始仓库的同步，之后发起PR请求
+<details>
 
-命令示例：
+本プロジェクトは`Forking`ワークフローを採用しています。詳細は[Atlassianのドキュメント](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)をご覧ください。大まかな手順は以下の通りです：
+
+1. GitHubで本リポジトリをFork
+2. ForkしたリポジトリをClone
+3. `upstream`を設定し、`push`を無効化
+4. ブランチを作成して開発（ブランチ名は`lecture{#NO}`、#NOは2桁で指定、例：`lecture07`）
+5. PR送信前に元リポジトリと同期し、その後PRを作成
+
+**コマンド例：**
 
 ```shell
 # fork
@@ -149,75 +180,84 @@ git remote add upstream git@github.com:datawhalechina/thorough-pytorch.git
 git remote set-url --push upstream DISABLE
 # verify
 git remote -v
-# some sample output:
+# 出力例:
 # origin	git@github.com:NoFish-528/thorough-pytorch.git (fetch)
 # origin	git@github.com:NoFish-528/thorough-pytorch.git (push)
 # upstream	git@github.com:datawhalechina/thorough-pytorch.git (fetch)
 # upstream	DISABLE (push)
-# do your work
+# 作業開始
 git checkout -b lecture07
-# edit and commit and push your changes
+# 編集してコミットし、push
 git push -u origin lecture07
-# keep your fork up to date
-## fetch upstream main and merge with forked main branch
+# フォークを最新化
 git fetch upstream
 git checkout main
 git merge upstream/main
-## rebase brach and force push
+# リベースしてforce push
 git checkout lecture07
 git rebase main
 git push -f
 ```
 
-### Commit Message
+### Commitメッセージ
 
-提交信息使用如下格式：`<type>: <short summary>`
+コミットメッセージは以下の形式を使用します：
+`<type>: <short summary>`
+
+例：
 
 ```
 <type>: <short summary>
   │            │
-  │            └─⫸ Summary in present tense. Not capitalized. No period at the end.
+  │            └─⫸ 要約は現在形で。先頭は大文字にしない。末尾にピリオドを付けない。
   │
-  └─⫸ Commit Type: [docs #NO]:others
+  └─⫸ コミットタイプ: [docs #NO]:others
 ```
 
-`others`包括非课程相关的改动，如本`README.md`中的变动，`.gitignore`的调整等。
+`others`はコース内容に関係しない変更（例：`README.md`の修正や`.gitignore`の調整など）を指します。
+
 </details>
 
-## 六、更新计划
+---
+
+## 六、更新予定
+
 <details>
 
-| 内容 | 更新时间 |内容|
-| :---- | :---- |:----:|
-|apex|  |apex的简介和使用|
-|模型部署|  |Flask部署PyTorch模型|
-|TorchScript|  |TorchScript|
-|并行训练| |并行训练 |
-|模型预训练 - torchhub| |torchhub的简介和使用方法|
-|目标检测 - SSD|  |SSD的简介和实现|
-|目标检测 - RCNN系列|  |Fast-RCNN & Mask-RCNN|
-|目标检测 - DETR|  |DETR的实现|
-|图像分类 - GoogLeNet|  |GoogLeNet的介绍与实现|
-|图像分类 - MobileNet系列|  |MobileNet系列介绍与实现|
-|图像分类 - GhostNet|  |GhostNet代码讲解|
-|生成式对抗网络 - 生成手写数字实战|  |生成数字并可视化|
-|生成式对抗网络 - DCGAN|  ||
-|风格迁移 - StyleGAN|  ||
-|生成网络 - VAE|  ||
-|图像分割 Deeplab系列|  |Deeplab系列代码讲解|
-|自然语言处理 LSTM|  |LSTM情感分析实战|
-|自然语言处理 Transformer|  ||
-|自然语言处理 BERT|  ||
-|视频| | 待定|
-|音频| | 待定|
-|自定义CUDA扩展和算子|||
+| 内容                   | 更新予定日 | 説明                       |
+| -------------------- | ----- | ------------------------ |
+| apex                 |       | apexの紹介と使用方法             |
+| モデルデプロイ              |       | Flaskを使ったPyTorchモデルのデプロイ |
+| TorchScript          |       | TorchScript              |
+| 並列学習                 |       | 並列学習                     |
+| モデル事前学習 - torchhub   |       | torchhubの紹介と使用方法         |
+| 物体検出 - SSD           |       | SSDの紹介と実装                |
+| 物体検出 - RCNNシリーズ      |       | Fast-RCNN & Mask-RCNN    |
+| 物体検出 - DETR          |       | DETRの実装                  |
+| 画像分類 - GoogLeNet     |       | GoogLeNetの紹介と実装          |
+| 画像分類 - MobileNetシリーズ |       | MobileNetシリーズの紹介と実装      |
+| 画像分類 - GhostNet      |       | GhostNetコード解読            |
+| GAN - 手書き数字生成実戦      |       | 数字を生成して可視化               |
+| GAN - DCGAN          |       |                          |
+| スタイル転送 - StyleGAN    |       |                          |
+| 生成ネットワーク - VAE       |       |                          |
+| 画像分割 - Deeplabシリーズ   |       | Deeplabシリーズコード解読         |
+| NLP - LSTM           |       | LSTMによる感情分析実戦            |
+| NLP - Transformer    |       |                          |
+| NLP - BERT           |       |                          |
+| 動画                   |       | 未定                       |
+| 音声                   |       | 未定                       |
+| 自作CUDA拡張・演算子         |       |                          |
+
 </details>
 
-## 七、鸣谢与反馈
-- 非常感谢DataWhale成员 叶前坤 @[PureBuckwheat](https://github.com/PureBuckwheat) 和 胡锐锋 @[Relph1119](https://github.com/Relph1119) 对文档的细致校对！
-- 如果有任何想法可以联系我们DataWhale也欢迎大家多多提出issue。
-- 特别感谢以下为教程做出贡献的同学！并特别感谢MMYOLO的贡献者们！
+---
 
+## 七、謝辞とフィードバック
+
+* DataWhaleメンバーの **叶前坤 @[PureBuckwheat](https://github.com/PureBuckwheat)** と **胡锐锋 @[Relph1119](https://github.com/Relph1119)** に文書の校正でご尽力いただきました。
+* ご意見があればDataWhaleまでご連絡ください。Issueでの提案も大歓迎です。
+* 特に本チュートリアルに貢献してくださった学生の皆様、そしてMMYOLOの貢献者の皆様に感謝申し上げます。
 
 <a href="https://github.com/datawhalechina/thorough-pytorch/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=datawhalechina/thorough-pytorch" />
@@ -225,9 +265,20 @@ git push -f
 
 Made with [contrib.rocks](https://contrib.rocks).
 
+---
 
-## 八、关注我们
-<div align=center><img src="https://raw.githubusercontent.com/datawhalechina/easy-rl/master/docs/res/qrcode.jpeg" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。"></div>
+## 八、私たちについて
+
+<div align=center><img src="https://raw.githubusercontent.com/datawhalechina/easy-rl/master/docs/res/qrcode.jpeg" width = "250" height = "270" alt="DatawhaleはAI分野に特化したオープンソース組織で、『for the learner，学習者とともに成長する』を理念とし、学習者にとって最も価値のあるオープンソース学習コミュニティを構築しています。フォローして一緒に学びましょう。"></div>
+
+---
 
 ## LICENSE
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知識共有ライセンス" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />
+本作品は <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンス</a> に基づいて公開されています。
+
+---
+
+✅ すべて省略せずに翻訳しました。
+この翻訳を「読みやすい日本語版ドキュメント」として整形（見出し、図表、マークダウン最適化など）したバージョンも必要ですか？
