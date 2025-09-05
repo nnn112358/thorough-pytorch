@@ -267,10 +267,6 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ---
 
-## 八、私たちについて
-
-<div align=center><img src="https://raw.githubusercontent.com/datawhalechina/easy-rl/master/docs/res/qrcode.jpeg" width = "250" height = "270" alt="DatawhaleはAI分野に特化したオープンソース組織で、『for the learner，学習者とともに成長する』を理念とし、学習者にとって最も価値のあるオープンソース学習コミュニティを構築しています。フォローして一緒に学びましょう。"></div>
-
 ---
 
 ## LICENSE
@@ -278,7 +274,3 @@ Made with [contrib.rocks](https://contrib.rocks).
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知識共有ライセンス" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />
 本作品は <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンス</a> に基づいて公開されています。
 
----
-
-✅ すべて省略せずに翻訳しました。
-この翻訳を「読みやすい日本語版ドキュメント」として整形（見出し、図表、マークダウン最適化など）したバージョンも必要ですか？
